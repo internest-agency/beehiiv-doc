@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .marquee {
+      max-width: 2100px;
+      overflow: hidden;
+      --speed: 25s;
+      --item-width: 300px;
+      --item-gap: 25px;
+
+      --single-slide-speed: calc(var(--speed) / var(--num-items));
+      --item-width-plus-gap: calc(var(--item-width) + var(--item-gap));
+      --track-width: calc(var(--item-width-plus-gap) * calc(var(--num-items) - 1));
+    }
+
+    .marquee-track {
+      container-type: inline-size;
+      display: grid;
+      grid-template-columns: var(--track-width) [track] 0px [resting];
+      width: max-content;
+    }
+
+    .marquee-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-area: resting;
+      animation: marquee-move var(--speed) linear infinite var(--direction,
+          forwards);
+      animation-delay: calc(var(--single-slide-speed) * var(--item-position) * -1);
+    }
+
+
+    @keyframes marquee-move {
+      to {
+        transform: translateX(calc(-100cqw - 100%));
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="marquee fadeout-horizontal" style="--num-items:10;">
+    <div class="marquee-track">
+      <div class="marquee-item" style="--item-position:1;">
+        <img src="./marquee/ani_south.png" alt="dailyhunt">
+      </div>
+      <div class="marquee-item" style="--item-position:2;">
+        <img src="./marquee/bignews_network.png" alt="dailyhunt">
+      </div>
+      <div class="marquee-item" style="--item-position:3;">
+        <img src="./marquee/business_standard.png" alt="dailyhunt">
+      </div>
+      <div class="marquee-item" style="--item-position:4;">
+        <img src="./marquee/dailyhunt.png" alt="dailyhunt">
+      </div>
+      <div class="marquee-item" style="--item-position:5;">
+        <img src="./marquee/google_news.png" alt="dailyhunt">
+      </div>
+      <div class="marquee-item" style="--item-position:7;">
+        <img src="./marquee/influencive.png" alt="dailyhunt">
+      </div>
+      <div class="marquee-item" style="--item-position:8;">
+        <img src="./marquee/latestly.png" alt="dailyhunt">
+      </div>
+      <div class="marquee-item" style="--item-position:9;">
+        <img src="./marquee/the_print.png" alt="dailyhunt">
+      </div>
+      <div class="marquee-item" style="--item-position:10;">
+        <img src="./marquee/yahoo.png" alt="dailyhunt">
+      </div>
+      <div class="marquee-item" style="--item-position:10;">
+        <img src="./marquee/zee.png" alt="dailyhunt">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

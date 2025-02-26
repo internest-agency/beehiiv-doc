@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beehiiv Newsletters WordPress Plugin Documentation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Beehiiv Newsletters WordPress Plugin Documentation</h1>
+
+    <h2>Overview</h2>
+    <p>The Beehiiv Newsletters WordPress Plugin allows you to display newsletters from Beehiiv on your WordPress website. This documentation provides a guide on installing, configuring, and using the plugin effectively.</p>
+
+    <hr>
+
+    <h2>Features</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li>✅ Connect multiple Beehiiv API keys</li>
+      <li>✅ Display newsletters from selected publications</li>
+      <li>✅ Customize newsletter display settings</li>
+      <li>✅ Show social media icons and links</li>
+      <li>✅ Edit or disconnect API connections anytime</li>
+    </ul>
+
+    <hr>
+
+    <h2>Plugin Pages</h2>
+    <section class="container">
+      <h3>Add New Key</h3>
+      <p>To connect a new Beehiiv API key, follow these steps:</p>
+      <ol>
+        <li>Create a new WordPress page to display newsletters.<img src="./images/add_new_page.jpg" alt="add-new-page" style="width: 100%;"> <img src="./images/sample_page.jpg" alt="sample_page" style="width: 100%;"></li>
+
+        <li>Navigate to <strong>Beehiiv &gt; Add New Key</strong> in the WordPress admin menu.<img src="./images/home_page.jpg" alt="home_page" style="width: 100%;"></li>
+
+        <li>Enter your <strong>API Key</strong> and click <strong>Verify</strong>.<img src="./images/api_key_entered.jpg" alt="api_key_entered" style="width: 100%;"></li>
+        <li>Once verified, all available publications under this API will be listed.<img src="./images/select_publication.jpg" alt="select_publication" style="width: 100%;"></li>
+        <li>Select the desired publications to display newsletters from. <img src="./images/select_page.jpg" alt="select_page" style="width: 100%;"></li>
+        <li>Choose the <strong>created WordPress page</strong> where the newsletters should be displayed.</li>
+        <li>Enter the <strong>Publication Title</strong> and a brief description.</li>
+        <li>Upload a <strong>Publication Logo</strong> to the WordPress media library and enter its URL.<img src="./images/details_filled_1.jpeg" alt="details_filled" style="width: 100%;"></li>
+        <li><strong>Optional:</strong> Enable <strong>Social Widget</strong> to display social media icons.</li>
+        <ul>
+          <li>Select social media <strong>icon text color</strong>.</li>
+          <li>Select social media <strong>icon background color</strong>.</li>
+          <li>Enter URLs for Facebook, Instagram, Twitter, YouTube, LinkedIn, and RSS Feed. <img src="./images/details_filled_1.jpeg" alt="details_filled" style="width: 100%;"></li>
+        </ul>
+        <li><strong>Optional:</strong> Customize newsletter card layout:</li>
+        <ul>
+          <li>Enable <strong>Show Published Date</strong> to display post dates.</li>
+          <li>Enable <strong>Show Sub Title</strong> to display subtitles.</li>
+          <li>Select the <strong>number of newsletter cards per row</strong> for desktop view.</li>
+        </ul>
+        <li>
+          Click <strong>Publish</strong> to save the settings.<img src="./images/details_filled_3.jpeg" alt="details_filled" style="width: 100%;">
+        </li>
+        <li>Click <strong>View Dashboard</strong> to see the list of connected APIs.</li>
+      </ol>
+    </section>
+    <section class="container">
+      <h3>Dashboard</h3>
+
+      <p>The <strong>Dashboard</strong> page provides an overview of all Beehiiv API connections. It displays a table with the following columns:</p>
+      <ul>
+        <li><strong>S. No</strong> – Serial number</li>
+        <li><strong>Publication Name</strong> – Name of the connected publication</li>
+        <li><strong>Publication ID</strong> – Unique ID of the publication</li>
+        <li><strong>API Key</strong> – The connected Beehiiv API key</li>
+        <li><strong>Page Slug</strong> – The associated WordPress page where newsletters are displayed</li>
+        <li><strong>Actions</strong> – Edit or Disconnect the connection</li>
+      </ul>
+      <div class="image-container text-center">
+        <img src="./images/dashboard.jpg" alt="dashboard-page" style="width: 100%;">
+      </div>
+    </section>
+    <section>
+      <h3>Editing an API Connection</h3>
+      <ol>
+        <li>Go to the <strong>Dashboard</strong>.</li>
+        <li>Click <strong>Edit</strong> next to the desired API connection.
+          <div class="image-container text-center">
+            <img src="./images/edit_publication.jpg" alt="dashboard-page" style="width: 100%;">
+          </div>
+        </li>
+        <li>Modify any required fields.</li>
+        <li>Click <strong>Save Changes</strong> to update.<div class="image-container text-center">
+            <img src="./images/update_publication.jpeg" alt="update_publication" style="width: 100%;">
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h3>Disconnecting an API Connection</h3>
+      <ol>
+        <li>Go to the <strong>Dashboard</strong>.</li>
+        <li>Click <strong>Disconnect</strong> next to the desired API.</li>
+        <li>Confirm the removal to disconnect it from your site.</li>
+      </ol>
+      <div class="image-container text-center">
+        <img src="./images/edit_publication.jpg" alt="edit-dashboard-page" style="width: 100%;">
+      </div>
+    </section>
+    <section>
+      <h2>Custom CSS</h2>
+      <p>You can customize the appearance of the Beehiiv Newsletters display using custom CSS. Below are some common styles you can modify:</p>
+      <h3>Styling the Newsletter Cards</h3>
+      <pre><code>
+.beehiiv-newsletter-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+</code></pre>
+
+      <h3>Customizing the Publication Title</h3>
+      <pre><code>
+.beehiiv-publication-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+</code></pre>
+
+      <h3>Styling Social Media Icons</h3>
+      <pre><code>
+.beehiiv-social-icons a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #0073aa;
+    color: white;
+    text-decoration: none;
+}
+.beehiiv-social-icons a:hover {
+    background-color: #005a87;
+}
+</code></pre>
+
+      <h3>Modifying the Newsletter Grid Layout</h3>
+      <pre><code>
+.beehiiv-newsletter-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+</code></pre>
+
+      <p>To apply these styles, add them to your WordPress theme's <code>style.css</code> file or use the WordPress Customizer under <strong>Additional CSS</strong>.</p>
+
+    </section>
+
+    <h2>Notes</h2>
+    <ul>
+      <li>Ensure that your Beehiiv API key is valid before proceeding.</li>
+      <li>Always assign a dedicated WordPress page for displaying newsletters.</li>
+      <li>If social widgets are enabled, ensure that the URLs provided are correct.</li>
+      <li>Adjust the layout settings for the best display experience on different devices.</li>
+    </ul>
+
+    <hr>
+
+    <p>This documentation should help you effectively use the Beehiiv Newsletters WordPress Plugin. For support or further assistance, write mail to <a href="mailto:web@internest.agency">web@internest.agency</a>.</p>
+  </div>
+</body>
+
+</html>
